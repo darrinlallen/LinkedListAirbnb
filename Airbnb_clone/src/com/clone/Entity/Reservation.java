@@ -1,13 +1,13 @@
 package com.clone.Entity;
 public class Reservation extends ResNumber{
 
-    private User user;
+    private Owner owner;
     private Listing listing;
     private String start;
     private String end;
 
-    public Reservation(User user, Listing listing, String start, String end) {
-        this.user = user;
+    public Reservation(Owner owner, Listing listing, String start, String end) {
+        this.owner = owner;
         this.listing = listing;
         this.start = start;
         this.end = end;
@@ -16,8 +16,8 @@ public class Reservation extends ResNumber{
         System.out.println(num);;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(Owner owner) {
+        this.owner = owner;
     }
 
     public void setListing(Listing listing) {
@@ -32,8 +32,8 @@ public class Reservation extends ResNumber{
         this.end = end;
     }
 
-    public User getUser() {
-        return user;
+    public Owner getUser() {
+        return owner;
     }
 
     public Listing getListing() {

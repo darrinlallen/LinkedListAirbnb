@@ -1,11 +1,11 @@
 package com.clone.Entity;
 public class NotificationHistory {
     protected String status;
-    protected User user;
+    protected Owner owner;
 
-    public NotificationHistory(String status, User user) {
+    public NotificationHistory(String status, Owner owner) {
         this.status = status;
-        this.user = user;
+        this.owner = owner;
     }
 
     public String getStatus() {
@@ -16,11 +16,11 @@ public class NotificationHistory {
         this.status = status;
     }
 
-    public User getUser() {
-        return user;
+    public Owner getUser() {
+        return owner;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(Owner owner) {
+        this.owner = owner;
     }
 }

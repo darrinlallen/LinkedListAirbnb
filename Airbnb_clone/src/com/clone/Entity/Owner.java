@@ -5,44 +5,17 @@ import com.clone.Interface.*;
 
 import static java.lang.System.*;
 
-public class User implements ICabin, IMansion, ICountrySide, ITreeHouse, IBarn {
+public class Owner implements ICabin, IMansion, ICountrySide, ITreeHouse, IBarn {
     private String name;
     private String email;
-    private String password;
 
     private Listing address;
 
-    private float price;
-    private String paymentInfo;
 
-    public float getPrice() {
-        return price;
-    }
-
-    public void setPrice(float price) {
-        this.price = price;
-    }
-
-    public String getPaymentInfo() {
-        return paymentInfo;
-    }
-
-    public void setPaymentInfo(String paymentInfo) {
-        this.paymentInfo = paymentInfo;
-    }
-
-    public Listing getAddress() {
-        return address;
-    }
-
-    public void setAddress(Listing address) {
-        this.address = address;
-    }
-
-    public User(String name, String email, String password) {
+    public Owner(String name, String email, Listing address) {
         this.name = name;
         this.email = email;
-        this.password = password;
+        this.address = address;
     }
 
 
@@ -65,12 +38,12 @@ public class User implements ICabin, IMansion, ICountrySide, ITreeHouse, IBarn {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
+    public Listing getAddress() {
+        return address;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setAddress(Listing address) {
+        this.address = address;
     }
 
     @Override

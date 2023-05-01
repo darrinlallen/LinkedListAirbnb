@@ -1,10 +1,10 @@
 package com.clone.Entity;
 public class Notification extends NotificationHistory {
-    private String message;
+    private String dateWorked;
 
-    public Notification(User user, String message, String status) {
-        super(status, user);
-         message = message;
+    public Notification(Owner owner, String status) {
+        super(status, owner);
+        dateWorked = dateWorked;
     }
 
     @Override
@@ -12,12 +12,12 @@ public class Notification extends NotificationHistory {
         this.status = status;
     }
 
-    public User getUser() {
-        return user;
+    public Owner getUser() {
+        return owner;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(Owner owner) {
+        this.owner = owner;
     }
 
     public String getStatus() {
@@ -28,11 +28,8 @@ public class Notification extends NotificationHistory {
         status = status;
     }
 
-    public String getMessage() {
-        return message;
-    }
+    public String getDateWorked() { return dateWorked;}
 
-    public void setMessage(String message) {
-        message = message;
-    }
+    public void setDateWorked(String dateWorked){dateWorked = dateWorked;}
 }
+

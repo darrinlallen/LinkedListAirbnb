@@ -3,10 +3,10 @@ import java.util.Objects;
 import java.lang.*;
 public class Message {
 
-    protected String sender;
-    protected String receiver;
+    private String sender;
+    private String receiver;
 
-    protected String message;
+    private String message;
 @Override
 public int hashCode(){
     return Objects.hash(sender, receiver, message);

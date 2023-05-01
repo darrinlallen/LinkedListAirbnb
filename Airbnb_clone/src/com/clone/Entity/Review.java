@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Review {
-    private User user;
+    private Owner owner;
 
     private String review;
     private Listing listing;
@@ -17,8 +17,8 @@ public class Review {
     private int[] ratingNum = new int[5];
 
 
-    public Review(User user,String rating, String review, int [] ratingNum) {
-        this.user = user;
+    public Review(Owner owner, String rating, String review, int [] ratingNum) {
+        this.owner = owner;
         this.rating = rating;
         this.review = review;
         this.ratingNum = ratingNum;
@@ -35,8 +35,8 @@ public class Review {
         }
     }
 
-    public User getUser() {
-        return user;
+    public Owner getUser() {
+        return owner;
     }
 
     public Listing getListing() {
@@ -51,8 +51,8 @@ public class Review {
         return review;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(Owner owner) {
+        this.owner = owner;
     }
 
     public void setListing(Listing listing) {

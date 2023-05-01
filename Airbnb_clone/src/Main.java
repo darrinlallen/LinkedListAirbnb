@@ -1,16 +1,16 @@
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
-package com.clone.Entity;
 
+
+import com.clone.Entity.*;
+import com.clone.Exceptions.FlagReasonException;
+import com.clone.Exceptions.FlagWriteFileException;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Objects;
-
-import com.clone.Exceptions.FlagReasonException;
-import com.clone.Exceptions.FlagWriteFileException;
-import org.apache.log4j.Logger;
 
 
 public class Main {
@@ -24,15 +24,37 @@ public class Main {
         logger.info("AirBNB clone");
 
 
-        User Darrin = new User("darrin", "darrin.allen@gmail.com", "passw0rd");
+//////////////////////            create listing//////////////////////////////////////////////////
+        Listing California1 = new Listing("111 south 8th street, orange county, CA");
+        Listing California2 = new Listing("1081 brown street, beverly hills, CA");
+        Listing California3 = new Listing("1521 north red avenue, California");
+        Listing California4 = new Listing("9 east carson ave, California");
+        Listing California5 = new Listing("1010 W. 3rd street, sacremento california");
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////Create owners ////////////////////////////////////////////////////////////////
+        Owner Darrin = new Owner("darrin", "darrin.allen@gmail.com" , California1);
         System.out.println("user name: " + Darrin.getName());
 
-        Cancellation lilly = new Cancellation("lilly", "novacation");
-        System.out.println("name " +lilly);
+        Owner Sam = new Owner("Sammy", "sam@gmail.com", California3);
+        System.out.println("user name: " + Sam.getName());
+
+        Owner Brett = new Owner("brett", "brett@yahoo.com", California4);
+        System.out.println("user name: " + Brett.getName());
+
+        Owner Sara = new Owner("Sara", "sara@yaoo.com", California4);
+
+
+//////////////////////////      equals           ////////////////////////////////////////////////////
 
         Chatroom john = new Chatroom("john", "xyz");
         Chatroom sam = new Chatroom("johnny", "xyz");
         System.out.println("john equals sam" + john.equals(sam));
+
+/////////////////////////////////////////////////////////////////////////////////
+
+
 
         Message test = new Message("darrin", "lucy", "hello");
         System.out.println("hashcode " + Objects.hashCode(test));

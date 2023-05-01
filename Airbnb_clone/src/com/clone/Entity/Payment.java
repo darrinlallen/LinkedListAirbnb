@@ -8,12 +8,12 @@ import java.io.IOException;
 
 public class Payment {
 
-    private User user;
+    private Owner owner;
     private Listing listing;
     private float amount;
 
-    public Payment(User user, Listing listing, float amount) {
-        this.user = user;
+    public Payment(Owner owner, Listing listing, float amount) {
+        this.owner = owner;
         this.listing = listing;
         this.amount = amount;
 
@@ -29,8 +29,8 @@ public class Payment {
 
         }
     }
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(Owner owner) {
+        this.owner = owner;
     }
 
     public void setListing(Listing listing) {
@@ -41,8 +41,8 @@ public class Payment {
         this.amount = amount;
     }
 
-    public User getUser() {
-        return user;
+    public Owner getUser() {
+        return owner;
     }
 
     public Listing getListing() {

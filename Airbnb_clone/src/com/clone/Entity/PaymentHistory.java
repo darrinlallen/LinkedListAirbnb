@@ -1,19 +1,19 @@
 package com.clone.Entity;
 public class PaymentHistory {
-    private User user;
+    private Owner owner;
     private int amount;
 
-    public PaymentHistory(User user, int amount) {
-        this.user = user;
+    public PaymentHistory(Owner owner, int amount) {
+        this.owner = owner;
         this.amount = amount;
     }
 
-    public User getuser() {
-        return user;
+    public Owner getuser() {
+        return owner;
     }
 
-    public void setuser(User user) {
-        this.user = user;
+    public void setuser(Owner owner) {
+        this.owner = owner;
     }
 
     public int getamount() {

@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public final class Cancellation {
     private String user;
-    private String reason = "default reason";
+    private String reason;
 
     public Cancellation(String user, String reason) {
 
