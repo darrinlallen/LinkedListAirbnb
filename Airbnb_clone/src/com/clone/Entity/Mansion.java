@@ -3,14 +3,13 @@ package com.clone.Entity;
 public class Mansion {
     private Owner owner;
     private Listing listing;
-    private  String start;
-    private  String end;
 
-    public Mansion(Owner owner, Listing listing, String start, String end) {
+
+
+    public Mansion(Owner owner, Listing listing) {
         this.owner = owner;
         this.listing = listing;
-        this.start = start;
-        this.end = end;
+
     }
 
     public Owner getOwner() {
@@ -29,19 +28,4 @@ public class Mansion {
         this.listing = listing;
     }
 
-    public String getStart() {
-        return start;
-    }
-
-    public void setStart(String start) {
-        this.start = start;
-    }
-
-    public String getEnd() {
-        return end;
-    }
-
-    public void setEnd(String end) {
-        this.end = end;
-    }
 }

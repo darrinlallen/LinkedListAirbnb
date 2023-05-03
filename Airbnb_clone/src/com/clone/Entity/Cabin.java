@@ -15,6 +15,9 @@ public final class Cabin {
 
     }
 
+    public Cabin() {
+    }
+
     public Owner getOwner() {
         return owner;
     }

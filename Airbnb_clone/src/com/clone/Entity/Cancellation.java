@@ -16,8 +16,10 @@ public final class Cancellation {
         this.reason = reason;
     }
 
+    public Cancellation() {
+    }
 
-            public static void flagReason(String user, String reason) throws FlagReasonException,IOException {
+    public static void flagReason(String user, String reason) throws FlagReasonException,IOException {
                 if (reason == "default"){
                     System.out.println("Inside cancellation module");
                     BufferedWriter writer = new BufferedWriter(new FileWriter("cancel.txt"));

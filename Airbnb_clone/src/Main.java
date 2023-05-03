@@ -4,8 +4,8 @@
 
 import com.clone.Entity.*;
 import com.clone.Exceptions.FlagReasonException;
-import com.clone.Exceptions.FlagWriteFileException;
-import org.apache.log4j.Logger;
+import com.clone.Exceptions.FlagWriteFileException;//
+//import org.apache.log4j.Logger;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -15,13 +15,13 @@ import java.util.Objects;
 
 public class Main {
 
-    private static Logger logger = Logger.getLogger(Main.class);
+//    private static Logger logger = Logger.getLogger(Main.class);
 
 
     public static void main(String[] args) throws IOException, NumberFormatException, FlagReasonException, FlagWriteFileException {
         // Press Alt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
-        logger.info("AirBNB clone");
+ //       logger.info("AirBNB clone");
 
 
 //////////////////////            create listing//////////////////////////////////////////////////
@@ -31,7 +31,10 @@ public class Main {
         Listing California4 = new Listing("9 east carson ave, California");
         Listing California5 = new Listing("1010 W. 3rd street, sacremento california");
 
-///////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 
 /////////////////////Create owners ////////////////////////////////////////////////////////////////
         Owner Darrin = new Owner("darrin", "darrin.allen@gmail.com" , California1);
@@ -44,7 +47,27 @@ public class Main {
         System.out.println("user name: " + Brett.getName());
 
         Owner Sara = new Owner("Sara", "sara@yaoo.com", California4);
+        System.out.println("user name: " + Sara.getName());
 
+        Owner Emitt = new Owner("emitt", "emitt@yahoo.com", California5);
+        System.out.println("user name: " + Emitt.getName());
+
+////////////////////////////////////  Homes   //////////////////////////////////////////////
+Homes home1 = new Homes(Darrin, California1, "May", "June" );
+
+///////////////////////////////   Cabin  ////////////////////////////////////////
+Cabin cabin1 = new Cabin(Sara, California2, "June", "july");
+
+
+
+//////////////////////////////Mansion  ///////////////////////////////////////////////////
+
+Mansion mansion1 = new Mansion(Sam, California4);
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////      equals           ////////////////////////////////////////////////////
 

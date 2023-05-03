@@ -51,7 +51,7 @@ public class Chatroom {
 
     @Override
     public boolean equals(Object o){
-        if (o == this) {return true;}
+        if (o == this || o == null) {return true;}
         if (!( o instanceof Chatroom)){
             return false;
         }

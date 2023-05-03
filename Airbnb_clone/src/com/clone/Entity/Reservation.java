@@ -3,17 +3,20 @@ public class Reservation extends ResNumber{
 
     private Owner owner;
     private Listing listing;
+
+    private String guestNum;
     private String start;
     private String end;
 
-    public Reservation(Owner owner, Listing listing, String start, String end) {
+    public Reservation(Owner owner, Listing listing, String start, String end, String guestNum) {
         this.owner = owner;
         this.listing = listing;
         this.start = start;
         this.end = end;
+        this.guestNum = guestNum;
     }
     public  void clientNum(String num){
-        System.out.println(num);;
+        System.out.println(num);
     }
 
     public void setUser(Owner owner) {
@@ -46,5 +49,21 @@ public class Reservation extends ResNumber{
 
     public String getEnd() {
         return end;
+    }
+
+    public Owner getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Owner owner) {
+        this.owner = owner;
+    }
+
+    public String getGuestNum() {
+        return guestNum;
+    }
+
+    public void setGuestNum(String guestNum) {
+        this.guestNum = guestNum;
     }
 }

@@ -3,12 +3,15 @@ package com.clone.Entity;
 public class AirbnbBusiness {
     public Owner owner;
     public Reservation reservation;
-    public String creditCardtype;
+    public String creditCard;
+
+    public AirbnbBusiness() {
+    }
 
     public AirbnbBusiness(Owner owner, Reservation reservation, String creditCardtype) {
         this.owner = owner;
         this.reservation = reservation;
-        this.creditCardtype = creditCardtype;
+        this.creditCard = creditCard;
     }
 
     public Owner getOwner() {
@@ -28,10 +31,10 @@ public class AirbnbBusiness {
     }
 
     public String getCreditCardtype() {
-        return creditCardtype;
+        return creditCard;
     }
 
     public void setCreditCardtype(String creditCardtype) {
-        this.creditCardtype = creditCardtype;
+        this.creditCard = creditCardtype;
     }
 }
