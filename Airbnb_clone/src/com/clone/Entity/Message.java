@@ -12,6 +12,9 @@ public int hashCode(){
     return Objects.hash(sender, receiver, message);
 }
 
+    public Message() {
+    }
+
     public Message(String sender, String receiver, String message) {
         this.sender = sender;
         this.receiver = receiver;

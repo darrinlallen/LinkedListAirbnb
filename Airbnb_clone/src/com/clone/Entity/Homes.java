@@ -6,6 +6,9 @@ public class Homes {
     private  String start;
     private  String end;
 
+    public Homes() {
+    }
+
     public Homes(Owner owner, Listing listing, String start, String end) {
         this.owner = owner;
         this.listing = listing;

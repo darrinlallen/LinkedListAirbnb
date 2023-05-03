@@ -16,6 +16,8 @@ public class Review {
     // rate on cleanliness, value, size, pool, neighbors
     private int[] ratingNum = new int[5];
 
+    public Review() {
+    }
 
     public Review(Owner owner, String rating, String review, int [] ratingNum) {
         this.owner = owner;

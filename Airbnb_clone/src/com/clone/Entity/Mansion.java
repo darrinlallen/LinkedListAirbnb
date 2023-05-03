@@ -4,7 +4,8 @@ public class Mansion {
     private Owner owner;
     private Listing listing;
 
-
+    public Mansion() {
+    }
 
     public Mansion(Owner owner, Listing listing) {
         this.owner = owner;

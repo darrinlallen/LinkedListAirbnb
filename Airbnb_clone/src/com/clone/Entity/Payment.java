@@ -12,6 +12,9 @@ public class Payment {
     private Listing listing;
     private float amount;
 
+    public Payment() {
+    }
+
     public Payment(Owner owner, Listing listing, float amount) {
         this.owner = owner;
         this.listing = listing;

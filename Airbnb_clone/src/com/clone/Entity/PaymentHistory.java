@@ -3,6 +3,9 @@ public class PaymentHistory {
     private Owner owner;
     private int amount;
 
+    public PaymentHistory() {
+    }
+
     public PaymentHistory(Owner owner, int amount) {
         this.owner = owner;
         this.amount = amount;

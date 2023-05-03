@@ -8,6 +8,9 @@ public class Reservation extends ResNumber{
     private String start;
     private String end;
 
+    public Reservation() {
+    }
+
     public Reservation(Owner owner, Listing listing, String start, String end, String guestNum) {
         this.owner = owner;
         this.listing = listing;

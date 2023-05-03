@@ -11,6 +11,8 @@ public class Owner implements ICabin, IMansion, ICountrySide, ITreeHouse, IBarn 
 
     private Listing address;
 
+    public Owner() {
+    }
 
     public Owner(String name, String email, Listing address) {
         this.name = name;

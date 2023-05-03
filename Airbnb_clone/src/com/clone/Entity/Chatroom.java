@@ -14,11 +14,12 @@ public class Chatroom {
 
     private String message;
 
+    public Chatroom() {
+    }
 
     public Chatroom(String name, String message)  {
         this.name = name;
         this.message = message;
-
 
     }
     public static void flagLength(String name, String message) throws FlagReasonException,IOException {

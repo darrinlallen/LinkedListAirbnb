@@ -3,6 +3,8 @@ public class Listing {
 
     private String address;
 
+    public Listing() {
+    }
 
     public Listing(String address) {
 

@@ -6,6 +6,9 @@ public class PrivateRooms {
     private  String start;
     private  String end;
 
+    public PrivateRooms() {
+    }
+
     public PrivateRooms(Owner owner, Listing listing, String start, String end) {
         this.owner = owner;
         this.listing = listing;

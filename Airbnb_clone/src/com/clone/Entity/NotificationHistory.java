@@ -3,6 +3,9 @@ public class NotificationHistory {
     protected String status;
     protected Owner owner;
 
+    public NotificationHistory() {
+    }
+
     public NotificationHistory(String status, Owner owner) {
         this.status = status;
         this.owner = owner;

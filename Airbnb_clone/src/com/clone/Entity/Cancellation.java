@@ -7,17 +7,18 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public final class Cancellation {
-    private String user;
+    private User user;
     private String reason;
 
-    public Cancellation(String user, String reason) {
+    public Cancellation() {
+    }
+    public Cancellation(User user, String reason) {
 
         this.user = user;
         this.reason = reason;
     }
 
-    public Cancellation() {
-    }
+
 
     public static void flagReason(String user, String reason) throws FlagReasonException,IOException {
                 if (reason == "default"){
@@ -40,11 +41,11 @@ public String toString (){
     return "name  " + user + "    reason  "+ reason;
 }
 
-    public String getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(String user) {
+    public void setUser(User user) {
         this.user = user;
     }
 

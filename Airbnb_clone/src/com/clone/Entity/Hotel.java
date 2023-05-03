@@ -1,22 +1,20 @@
 package com.clone.Entity;
-public final class Cabin {
+
+public class Hotel {
     private Owner owner;
     private Listing listing;
-    private String pictures;
     private String numRooms;
+    private String pictures;
 
-    public Cabin() {
+    public Hotel() {
     }
 
-    public Cabin(Owner owner, Listing listing, String pictures, String numRooms) {
-
+    public Hotel(Owner owner, Listing listing, String numRooms, String pictures) {
         this.owner = owner;
         this.listing = listing;
-        this.pictures = pictures;
         this.numRooms = numRooms;
-
+        this.pictures = pictures;
     }
-
 
     public Owner getOwner() {
         return owner;
@@ -34,19 +32,19 @@ public final class Cabin {
         this.listing = listing;
     }
 
-    public String getPictures() {
-        return pictures;
-    }
-
-    public void setPictures(String pictures) {
-        this.pictures = pictures;
-    }
-
     public String getNumRooms() {
         return numRooms;
     }
 
     public void setNumRooms(String numRooms) {
         this.numRooms = numRooms;
+    }
+
+    public String getPictures() {
+        return pictures;
+    }
+
+    public void setPictures(String pictures) {
+        this.pictures = pictures;
     }
 }

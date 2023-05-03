@@ -2,6 +2,10 @@ package com.clone.Entity;
 public class Notification extends NotificationHistory {
     private String dateWorked;
 
+    public Notification(String status, Owner owner) {
+        super(status, owner);
+    }
+
     public Notification(Owner owner, String status) {
         super(status, owner);
         dateWorked = dateWorked;
