@@ -1,11 +1,19 @@
 package com.clone.Entity;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 public class AirbnbBusiness {
-    public User user;
-    public Reservation reservation;
+    private User user;
+    private Reservation reservation;
+
+    private String email;
+    private String phone;
+    private  String address;
 
     public AirbnbBusiness() {
     }
+    private static final Logger logger = LogManager.getLogger(AirbnbBusiness.class);
 
     public AirbnbBusiness(User user, Reservation reservation) {
         this.user = user;

@@ -1,15 +1,24 @@
-package com.clone.Entity;
+package com.clone.RentalListing;
 
-public class Mansion {
+import com.clone.Entity.Listing;
+import com.clone.Entity.Owner;
+
+public class
+Mansion {
     private Owner owner;
     private Listing listing;
+
+    private String pictures;
+    private String numRooms;
 
     public Mansion() {
     }
 
-    public Mansion(Owner owner, Listing listing) {
+    public Mansion(Owner owner, Listing listing, String pictures, String numRooms) {
         this.owner = owner;
         this.listing = listing;
+        this.pictures = pictures;
+        this.numRooms = numRooms;
 
     }
 

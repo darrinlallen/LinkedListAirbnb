@@ -5,7 +5,7 @@ import com.clone.Interface.*;
 
 import static java.lang.System.*;
 
-public class Owner implements ICabin, IMansion, ICountrySide, ITreeHouse, IBarn {
+public class Owner implements IMessage, IReserve, INotify, ICancel, IPay {
     private String name;
     private String email;
 

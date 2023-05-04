@@ -1,5 +1,5 @@
 package com.clone.Interface;
 
-public interface ICountrySide {
+public interface INotify {
     String getCountrySide(String location);
 }

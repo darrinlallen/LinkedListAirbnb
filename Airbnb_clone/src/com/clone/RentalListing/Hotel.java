@@ -1,11 +1,16 @@
-package com.clone.Entity;
+package com.clone.RentalListing;
+
+import com.clone.Entity.Listing;
+import com.clone.Entity.Owner;
+
+import java.util.ArrayList;
 
 public class Hotel {
     private Owner owner;
     private Listing listing;
     private String numRooms;
     private String pictures;
-
+    
     public Hotel() {
     }
 
@@ -14,6 +19,7 @@ public class Hotel {
         this.listing = listing;
         this.numRooms = numRooms;
         this.pictures = pictures;
+
     }
 
     public Owner getOwner() {

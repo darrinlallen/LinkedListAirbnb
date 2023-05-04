@@ -5,6 +5,9 @@
 import com.clone.Entity.*;
 import com.clone.Exceptions.FlagReasonException;
 import com.clone.Exceptions.FlagWriteFileException;//
+import com.clone.RentalListing.Cabin;
+import com.clone.RentalListing.Home;
+import com.clone.RentalListing.Mansion;
 //import org.apache.log4j.Logger;
 
 import java.io.BufferedWriter;
@@ -53,16 +56,15 @@ public class Main {
         System.out.println("user name: " + Emitt.getName());
 
 ////////////////////////////////////  Homes   //////////////////////////////////////////////
-Homes home1 = new Homes(Darrin, California1, "May", "June" );
+
+
 
 ///////////////////////////////   Cabin  ////////////////////////////////////////
-Cabin cabin1 = new Cabin(Sara, California2, "June", "july");
 
 
 
 //////////////////////////////Mansion  ///////////////////////////////////////////////////
 
-Mansion mansion1 = new Mansion(Sam, California4);
 
 
 

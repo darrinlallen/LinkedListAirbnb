@@ -1,5 +1,5 @@
 package com.clone.Interface;
 
-public interface ICabin {
+public interface IMessage {
     String getCabin(String numWindows, String numDoors);
 }
