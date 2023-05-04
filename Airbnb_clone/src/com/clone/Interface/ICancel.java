@@ -1,5 +1,5 @@
 package com.clone.Interface;
 
 public interface ICancel {
-    void getTreeHouse(String treeType);
+   public default void cancelMessage(){};
 }

@@ -1,5 +1,10 @@
 package com.clone.Entity;
-public class Reservation extends ResNumber{
+
+import com.clone.Interface.IReserve;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
+public class Reservation extends ResNumber implements IReserve {
 
     private Owner owner;
     private Listing listing;
@@ -7,6 +12,8 @@ public class Reservation extends ResNumber{
     private String guestNum;
     private String start;
     private String end;
+    private static final Logger logger = LogManager.getLogger(AirbnbBusiness.class);
+
 
     public Reservation() {
     }
@@ -22,6 +29,9 @@ public class Reservation extends ResNumber{
         System.out.println(num);
     }
 
+public void reserveMessage(){
+        logger.info("reservation was made");
+}
     public void setUser(Owner owner) {
         this.owner = owner;
     }

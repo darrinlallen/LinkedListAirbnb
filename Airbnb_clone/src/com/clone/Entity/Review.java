@@ -1,6 +1,8 @@
 package com.clone.Entity;
 
 import com.clone.Exceptions.FlagReviewException;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -15,6 +17,7 @@ public class Review {
 
     // rate on cleanliness, value, size, pool, neighbors
     private int[] ratingNum = new int[5];
+    private static final Logger logger = LogManager.getLogger(AirbnbBusiness.class);
 
     public Review() {
     }
@@ -27,7 +30,7 @@ public class Review {
     }
     public static void flagReason(String review) throws FlagReviewException, IOException {
         if (review == ""){
-            System.out.println("Inside review module");
+            logger.info("Inside review module");
             BufferedWriter writer = new BufferedWriter(new FileWriter("review.txt"));
             writer.write("review cannot be blank");
             writer.close();

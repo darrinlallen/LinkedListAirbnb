@@ -5,7 +5,7 @@ import com.clone.Interface.*;
 
 import static java.lang.System.*;
 
-public class Owner implements IMessage, IReserve, INotify, ICancel, IPay {
+public class Owner  {
     private String name;
     private String email;
 
@@ -48,32 +48,5 @@ public class Owner implements IMessage, IReserve, INotify, ICancel, IPay {
         this.address = address;
     }
 
-    @Override
-    public String getBarn(String livestock, String chickensPresent) {
-        out.println("livestock " + livestock +" chickens "+ chickensPresent);;
-        return livestock;
-    }
 
-    @Override
-    public String getCabin(String numWindows, String numDoors) {
-        out.println("windows " + numWindows+ " doors");;
-        return numWindows;
-    }
-
-    @Override
-    public String getCountrySide(String location) {
-        out.println("location "+ location);;
-        return location;
-    }
-
-    @Override
-    public String getMansion(String roomsNumber, String squareFootage) {
-        out.println("rooms "+ roomsNumber + " squarefoot "+ squareFootage);;
-        return roomsNumber;
-    }
-
-    @Override
-    public void getTreeHouse(String treeType) {
-        System.out.println("type " + treeType);
-    }
 }

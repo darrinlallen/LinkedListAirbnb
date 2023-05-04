@@ -1,36 +1,34 @@
-package com.clone.RentalListing;
+package com.clone.PropertyType;
 
+import com.clone.Entity.Availability;
 import com.clone.Entity.Listing;
 import com.clone.Entity.Owner;
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
-public final class Cabin {
+public class Hotel extends Availability {
     private Owner owner;
     private Listing listing;
+    private String numRooms;
     private String pictures;
-    private int numRooms;
     private ArrayList<String> roomsAvailable = new ArrayList<>();
+    private static Logger logger = Logger.getLogger(String.valueOf(Hotel.class));
 
-    public Cabin() {
+    public Hotel() {
     }
 
-    public Cabin(Owner owner, Listing listing, String pictures, int numRooms, ArrayList<String> roomsAvailable) {
-
+    public Hotel(Owner owner, Listing listing, String numRooms, String pictures, ArrayList<String> roomsAvailable) {
         this.owner = owner;
         this.listing = listing;
-        this.pictures = pictures;
         this.numRooms = numRooms;
+        this.pictures = pictures;
         this.roomsAvailable = roomsAvailable;
 
     }
+    public void availability(){
 
-    public ArrayList<String> getRoomsAvailable() {
-        return roomsAvailable;
-    }
-
-    public void setRoomsAvailable(ArrayList<String> roomsAvailable) {
-        this.roomsAvailable = roomsAvailable;
+        logger.info("no rooms available");
     }
 
     public Owner getOwner() {
@@ -49,6 +47,14 @@ public final class Cabin {
         this.listing = listing;
     }
 
+    public String getNumRooms() {
+        return numRooms;
+    }
+
+    public void setNumRooms(String numRooms) {
+        this.numRooms = numRooms;
+    }
+
     public String getPictures() {
         return pictures;
     }
@@ -57,11 +63,11 @@ public final class Cabin {
         this.pictures = pictures;
     }
 
-    public int getNumRooms() {
-        return numRooms;
+    public ArrayList<String> getRoomsAvailable() {
+        return roomsAvailable;
     }
 
-    public void setNumRooms(int numRooms) {
-        this.numRooms = numRooms;
+    public void setRoomsAvailable(ArrayList<String> roomsAvailable) {
+        this.roomsAvailable = roomsAvailable;
     }
 }

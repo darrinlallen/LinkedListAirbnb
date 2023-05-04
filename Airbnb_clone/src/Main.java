@@ -5,26 +5,24 @@
 import com.clone.Entity.*;
 import com.clone.Exceptions.FlagReasonException;
 import com.clone.Exceptions.FlagWriteFileException;//
-import com.clone.RentalListing.Cabin;
-import com.clone.RentalListing.Home;
-import com.clone.RentalListing.Mansion;
 //import org.apache.log4j.Logger;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Objects;
+import java.util.logging.Logger;
 
 
 public class Main {
 
-//    private static Logger logger = Logger.getLogger(Main.class);
+   private static Logger logger = Logger.getLogger(String.valueOf(Main.class));
 
 
     public static void main(String[] args) throws IOException, NumberFormatException, FlagReasonException, FlagWriteFileException {
         // Press Alt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
- //       logger.info("AirBNB clone");
+        logger.info("AirBNB clone");
 
 
 //////////////////////            create listing//////////////////////////////////////////////////

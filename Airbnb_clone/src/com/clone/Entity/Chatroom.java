@@ -1,5 +1,7 @@
 package com.clone.Entity;
 import com.clone.Exceptions.FlagReasonException;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -14,6 +16,8 @@ public class Chatroom {
 
     private String message;
 
+    private static final Logger logger = LogManager.getLogger(AirbnbBusiness.class);
+
     public Chatroom() {
     }
 
@@ -24,7 +28,7 @@ public class Chatroom {
     }
     public static void flagLength(String name, String message) throws FlagReasonException,IOException {
         if (message == ""){
-            System.out.println("Inside chatroom module");
+            logger.info("Inside chatroom module");
             BufferedWriter writer = new BufferedWriter(new FileWriter("chat.txt"));
             writer.write("chatroom message cannot be blank");
             writer.close();
@@ -38,14 +42,14 @@ public class Chatroom {
         try {
             System.out.println(Integer.parseInt(name));
         } catch (NumberFormatException ex) {
-            System.out.println("I  was unable to parse name variable");
+            logger.info("I  was unable to parse name variable");
             BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
             writer.write("I was unable to parse Name variable");
             writer.close();
             // Print the message from MyException object
             System.out.println(ex.getMessage());
         } finally {
-            System.out.println("This message is from chatroom from the chatroom");
+            logger.info("This message is from chatroom from the chatroom");
         }
     }
 

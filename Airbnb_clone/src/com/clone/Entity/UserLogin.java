@@ -1,30 +1,23 @@
 package com.clone.Entity;
 
+import java.util.HashMap;
+
 public class UserLogin {
-    private String userId;
-    private String password;
+    HashMap<String, String> user = new HashMap<String, String>();
 
     public UserLogin() {
     }
 
-    public UserLogin(String userId, String password) {
-        this.userId = userId;
-        this.password = password;
+    public HashMap<String, String> getUser() {
+        return user;
     }
 
-    public String getUserId() {
-        return userId;
+    public void setUser(HashMap<String, String> user) {
+        this.user = user;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public UserLogin(HashMap<String, String> user) {
+        this.user = user;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }

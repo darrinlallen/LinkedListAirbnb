@@ -1,16 +1,20 @@
 package com.clone.Entity;
 
 import com.clone.Exceptions.FlagLengthException;
+import com.clone.Interface.IPay;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Payment {
+public class Payment implements IPay {
 
     private Owner owner;
     private Listing listing;
     private float amount;
+    private static final Logger logger = LogManager.getLogger(AirbnbBusiness.class);
 
     public Payment() {
     }
@@ -21,9 +25,12 @@ public class Payment {
         this.amount = amount;
 
     }
+    public void payMessage(){
+        logger.info("payment complete");
+    }
     public static void flagPayment(float amount) throws IOException, FlagLengthException {
         if (amount == 0){
-            System.out.println("Inside Payment module");
+            logger.info("Inside Payment module");
             BufferedWriter writer = new BufferedWriter(new FileWriter("payment.txt"));
             writer.write("Payment cannot be zero");
             writer.close();

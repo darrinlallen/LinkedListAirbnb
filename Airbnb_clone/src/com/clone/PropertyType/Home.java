@@ -1,16 +1,19 @@
-package com.clone.RentalListing;
+package com.clone.PropertyType;
 
+import com.clone.Entity.Availability;
 import com.clone.Entity.Listing;
 import com.clone.Entity.Owner;
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
-public class Home {
+public class Home extends Availability {
     private Owner owner;
     private Listing listing;
     private  String pictures;
     private  String numRooms;
     private ArrayList<String> roomsAvailable = new ArrayList<>();
+    private static Logger logger = Logger.getLogger(String.valueOf(Home.class));
 
     public Home() {
     }
@@ -23,6 +26,10 @@ public class Home {
         this.roomsAvailable = roomsAvailable;
     }
 
+    public void availability(){
+
+        logger.info("no rooms available");
+    }
     public Owner getOwner() {
         return owner;
     }
