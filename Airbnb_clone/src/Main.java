@@ -12,6 +12,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Objects;
 import java.util.logging.Logger;
+import com.clone.LinkedList.LinkedListAvailableRooms;
 
 
 public class Main {
@@ -23,6 +24,17 @@ public class Main {
         // Press Alt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
         logger.info("AirBNB clone");
+
+/////////////////////////////Insert rooms that are available to linked list/////////////////////////
+
+        LinkedListAvailableRooms room = new LinkedListAvailableRooms();
+        room.addBeginning(1);
+        room.addBeginning(2);
+        room.addBeginning(3);
+        room.addEnd(100);
+        room.addMiddle(40, room.getCnt() /2);
+
+        room.display();
 
 
 //////////////////////            create listing//////////////////////////////////////////////////
