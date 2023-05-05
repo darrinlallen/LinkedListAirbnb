@@ -6,14 +6,14 @@ import com.clone.Entity.*;
 import com.clone.Exceptions.FlagReasonException;
 import com.clone.Exceptions.FlagWriteFileException;//
 //import org.apache.log4j.Logger;
-
+import com.clone.Entity.UserLogin;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Objects;
 import java.util.logging.Logger;
 import com.clone.LinkedList.LinkedListAvailableRooms;
-
+import java.util.HashMap;
 
 public class Main {
 
@@ -24,6 +24,16 @@ public class Main {
         // Press Alt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
         logger.info("AirBNB clone");
+
+
+        ////////////////////////////  user logins ////////////////
+
+        HashMap<String, String> users = new HashMap<>();
+
+        users.put("darrin", "pass");
+        users.put("scott", "passw0rd");
+        users.put("sara", "password");
+        users.put("mary", "passw0rd");
 
 /////////////////////////////Insert rooms that are available to linked list/////////////////////////
 
